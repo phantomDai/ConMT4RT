@@ -50,4 +50,11 @@ public class TestCompany {
         }
         PrintResults.printResults("HierarchyExample", stringBuffer.toString());
     }
+
+    public static void main(String[] args) {
+        new TestCompany().testCompany(Constants.NUMOFTESTCASE1);
+        new TestCompany().testCompany(Constants.NUMOFTESTCASE5);
+        new TestCompany().testCompany(Constants.NUMOFTESTCASE25);
+        new TestCompany().testCompany(Constants.NUMOFTESTCASE125);
+    }
 }
