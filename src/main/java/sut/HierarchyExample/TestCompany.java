@@ -47,7 +47,7 @@ public class TestCompany {
                     }
                 }
             }
-            PrintResults.printResults("HierarchyExample", stringBuffer.toString());
         }
+        PrintResults.printResults("HierarchyExample", stringBuffer.toString());
     }
 }

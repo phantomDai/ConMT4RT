@@ -47,8 +47,9 @@ public class TestLinkedList {
                     }
                 }
             }
-            PrintResults.printResults("LinkedList", stringBuffer.toString());
+
         }
+        PrintResults.printResults("LinkedList", stringBuffer.toString());
     }
 
     public static void main(String[] args) {

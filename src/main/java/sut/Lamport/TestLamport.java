@@ -39,7 +39,8 @@ public class TestLamport {
                     }
                 }
             }
-            PrintResults.printResults("Lamport", stringBuffer.toString());
+
         }
+        PrintResults.printResults("Lamport", stringBuffer.toString());
     }
 }

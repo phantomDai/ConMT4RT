@@ -39,8 +39,9 @@ public class TestPingPong {
                     }
                 }
             }
-            PrintResults.printResults("PingPong", stringBuffer.toString());
+
         }
+        PrintResults.printResults("PingPong", stringBuffer.toString());
     }
 
     public static void main(String[] args) {

@@ -47,8 +47,9 @@ public class TestLottery {
                     }
                 }
             }
-            PrintResults.printResults("Lottery", stringBuffer.toString());
+
         }
+        PrintResults.printResults("Lottery", stringBuffer.toString());
 
 
     }

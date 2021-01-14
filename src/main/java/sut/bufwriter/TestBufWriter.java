@@ -47,8 +47,8 @@ public class TestBufWriter {
                     }
                 }
             }
-            PrintResults.printResults("BufWriter", stringBuffer.toString());
         }
+        PrintResults.printResults("BufWriter", stringBuffer.toString());
     }
 
     public static void main(String[] args) {

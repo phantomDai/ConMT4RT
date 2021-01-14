@@ -39,7 +39,7 @@ public class TestDekker {
                     }
                 }
             }
-            PrintResults.printResults("Dekker", stringBuffer.toString());
         }
+        PrintResults.printResults("Dekker", stringBuffer.toString());
     }
 }

@@ -46,8 +46,8 @@ public class TestCounter {
                     }
                 }
             }
-            PrintResults.printResults("Counter", stringBuffer.toString());
         }
+        PrintResults.printResults("Counter", stringBuffer.toString());
     }
 
     public static void main(String[] args) {

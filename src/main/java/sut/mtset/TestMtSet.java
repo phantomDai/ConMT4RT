@@ -39,8 +39,9 @@ public class TestMtSet {
                     }
                 }
             }
-            PrintResults.printResults("MTSet", stringBuffer.toString());
+
         }
+        PrintResults.printResults("MTSet", stringBuffer.toString());
     }
 
     public static void main(String[] args) {

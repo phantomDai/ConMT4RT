@@ -39,8 +39,9 @@ public class TestPeterson {
                     }
                 }
             }
-            PrintResults.printResults("Peterson", stringBuffer.toString());
+
         }
+        PrintResults.printResults("Peterson", stringBuffer.toString());
     }
 
     public static void main(String[] args) {
