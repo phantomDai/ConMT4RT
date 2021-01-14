@@ -1,11 +1,24 @@
 package testsuite;
 
-import java.util.Random;
+import java.util.List;
 
-public class TestSuite {
-    public Random random;
+public interface TestSuite {
 
-    public TestSuite(int seed){
-        random = new Random(seed);
+    static List<String[]> getTestSuite1(int seed) {
+        return null;
     }
+
+    static List<String[]> getTestSuite5(int seed) {
+        return null;
+    }
+
+    static List<String[]> getTestSuite25(int seed) {
+        return null;
+    }
+    static List<String[]> getTestSuite125(int seed) {
+        return null;
+    }
+
+
+
 }

@@ -20,9 +20,7 @@ public class Main {
       try{
           if(args.length>0){
                 out=new PrintStream(new FileOutputStream(args[0]));
-               // System.setOut(out);//directint all the "out" printing to the file.
-               if(args.length==1){//the default value=little
-                  System.out.println("The default value=little");
+               if(args.length==1){
                }
                  out.print("<Account program,");
                   if(args.length==2){//the concurrency is optional
