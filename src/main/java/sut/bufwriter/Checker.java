@@ -22,7 +22,7 @@ public class Checker implements Runnable{
   {
       synchronized (_buf)
       {
-        System.out.println("我在检查");
+//        System.out.println("我在检查");
          _writtenCount += _buf._pos;
          _buf._pos = 0;
       }

@@ -30,6 +30,7 @@ public class TestCounter {
                     long endTime = System.currentTimeMillis();
                     //判断是否揭示故障
                     if (Counter.counter != 0){
+                        System.out.println("揭示故障！");
                         isKilled = true;
                         stringBuffer.append("用时:" + String.valueOf(endTime - startTime) +
                                 ";使用的测试用例:" + String.valueOf(counter) + "\n");

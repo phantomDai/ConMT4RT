@@ -21,7 +21,7 @@ public class BufWriter extends Thread {
   public static void test (String[] args)
   {
       iskilled = false;
-   args = new String[]{"/Users/phantom/javaDir/CMTJmcr/output/output", "little"};
+//   args = new String[]{"/Users/phantom/javaDir/CMTJmcr/output/output", "little"};
     Buffer buf = new Buffer(Integer.valueOf(args[2]));
     File outFile;
     Thread[] wr;
@@ -90,6 +90,7 @@ public class BufWriter extends Thread {
       outStream.writeChars("<BufWriter,");
       outStream.writeChars(res+",");
       if (res != 0){
+          System.out.println("揭示故障！");
           iskilled = true;
         outStream.writeChars("[Wrong/No-Lock]>");}
       else{
@@ -99,5 +100,9 @@ public class BufWriter extends Thread {
     catch (IOException e) {}
     return;
   }
+
+    public static void main(String[] args) {
+        BufWriter.test(new String[]{"/Users/phantom/javaDir/CMTJmcr/output/output", "little", "1000"});
+    }
 
 }

@@ -1,4 +1,4 @@
-package sut.HierarchyExample;
+package sut.company;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,10 +10,8 @@ public class Company {
 	boolean active = true;
 	Company parent;
 	List children = new ArrayList();
-
-	public static boolean isKilled = false;
 	
-	public void setName(String name){
+	public Company(String name) {
 		this.name = name;
 	}
 	
@@ -28,7 +26,7 @@ public class Company {
 		return active;
 	}
 	
-	public boolean setParent(Company newParent) {
+	public synchronized boolean setParent(Company newParent) {
 		if(newParent == null) {
 			this.parent = null;
 			return true;
@@ -62,7 +60,7 @@ public class Company {
 		return true;
 	}
 	
-	public boolean setInactive() {
+	public synchronized boolean setInactive() {
 		if(isChildrenInactive()) {
 			active = false;
 			return true;			
@@ -72,14 +70,10 @@ public class Company {
 	}
 	
 	static Company clients[] = new Company[] {
-		new Company(), new Company()
+		new Company("Rosneft"), new Company("Gazprom")	
 	};
 	
-	public static void test(String[] args) {
-		isKilled = false;
-		clients[0].setName(args[0]);
-		clients[1].setName(args[1]);
-
+	public static void main(String[] args) {
 		Thread t1 =  new Thread() {
 			public void run() {
 				clients[0].setParent(clients[1]);
@@ -93,7 +87,15 @@ public class Company {
 		
 		t2.start();
 		t1.start();
-
+		
+		/*
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}*/
+		
+		
 		try {
 			t1.join();
 			t2.join();
@@ -101,23 +103,12 @@ public class Company {
 			e.printStackTrace();
 		}
 		
-
-		boolean b = clients[0].parent == null
-			|| clients[1].isActive()
+		//System.out.println(clients[0] + "\n" + clients[1]);
+		
+		boolean b = clients[0].parent == null 
+			|| clients[1].isActive() 
 			|| !clients[0].isActive();
-
-		if (!b){
-			System.out.println("揭示故障");
-			isKilled = true;
-		}
-
+		System.out.println(b);
+		assert b; 
 	}
-
-	public static void main(String[] args) {
-		args = new String[]{"A", "B"};
-		for (int i = 0; i < 20000000; i++) {
-			Company.test(args);
-		}
-	}
-
 }
